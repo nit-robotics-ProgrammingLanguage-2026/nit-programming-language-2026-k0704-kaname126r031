@@ -1,32 +1,25 @@
 #include <stdio.h>
-
-int addToTotal(int valueToAdd)
+int addaToTotal(int valueToAdd)
 {
-    static int accumulatedTotal = 0;
-
-    accumulatedTotal += valueToAdd;
-
+    static int accumulatedTotal=0;
+    accumulatedTotal+=valueToAdd;
     return accumulatedTotal;
 }
-
 int main(void)
 {
-    int numberOfIterations;
-    int accumulatedResult = 0;
-
-    scanf("%d", &numberOfIterations);
-
-    if (numberOfIterations < 1 || numberOfIterations > 10)
+    int numberOfiterations;
+    int accumulatedResult=0;
+    scanf("%d",&numberOfiterations);
+    if(numberOfiterations<1||numberOfiterations>10)
     {
         printf("NG");
         return 0;
     }
-    for (int iteration = 1; iteration <= numberOfIterations; iteration++)
+    for(int iteration=1;iteration<=numberOfiterations;iteration++)
     {
-        accumulatedResult = addToTotal(iteration * 2);
+        accumulatedResult=addaToTotal(iteration*2);
     }
-
-    printf("%d", accumulatedResult);
-
+    printf("%d",accumulatedResult);
+    
     return 0;
 }
